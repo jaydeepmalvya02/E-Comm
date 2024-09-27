@@ -15,7 +15,7 @@ const SignUp = () => {
   },[])
   const collectData= async()=>{
     console.warn(name,email,password);
-    let result= await fetch(`${window.location.origin}/register`,{method:'post',
+    let result= await fetch(`shopify-dashboard-red.vercel.app/register`,{method:'post',
       body: JSON.stringify({name,email,password}),
       headers:{
         'content-type':'application/json'

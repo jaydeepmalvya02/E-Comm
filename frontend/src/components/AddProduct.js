@@ -13,7 +13,7 @@ const AddProduct = () => {
     console.warn(name,price,category,company);
     const userId=JSON.parse(localStorage.getItem('user'))._id;
     console.warn(userId);
-    let result=await fetch(`${window.location.origin}/add-product`,{
+    let result=await fetch(`shopify-dashboard-red.vercel.app/add-product`,{
       method:'post',
       body:JSON.stringify({name,price,category,company,userId}),
       headers:{

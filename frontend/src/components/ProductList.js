@@ -7,7 +7,7 @@ const ProductList = () => {
     getProducts();
   },[])
   const getProducts=async ()=>{
-    let result= await fetch('http://localhost:5000/products')
+    let result= await fetch('shopify-dashboard-red.vercel.app/products')
     result=await result.json();
 
     setProucts(result);
@@ -15,7 +15,7 @@ const ProductList = () => {
   
   const deleteProduct=async(id)=>{
     console.warn(id)
-    let result=await fetch(`http://localhost:5000/products/${id}`,{
+    let result=await fetch(`shopify-dashboard-red.vercel.app/products/${id}`,{
       method:"Delete"
 
     })
@@ -28,7 +28,7 @@ const ProductList = () => {
   const searchHandle=async(event)=>{
     let key=event.target.value;
     if (key){
-      let result=await fetch(`${window.location.origin}/search/${key}`)
+      let result=await fetch(`shopify-dashboard-red.vercel.app/search/${key}`)
       result=await result.json();
       if(result){
         setProucts(result)

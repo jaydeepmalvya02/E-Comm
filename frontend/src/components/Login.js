@@ -16,7 +16,8 @@ const Login = () => {
 
   const handleLogin=async()=>{
     
-    let result= await fetch(`${window.location.origin}/login`,{
+    let result= await fetch(`shopify-dashboard-red.vercel.app
+/login`,{
       method:'post',
       body:JSON.stringify({email,password}),
       headers:{
